@@ -34,4 +34,10 @@ if `RAAHIL' {
 	local DATA `ROOT'/data
 	}
 	
+//open data
+import delimited "`DATA'/turnstile_data_master_with_weather.csv", clear
+
+//tab
+tabstat entriesn_hourly, s(n mean) by(hour)
+	
 
